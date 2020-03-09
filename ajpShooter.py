@@ -332,7 +332,7 @@ class ajpShooter(object):
         if self.shooter == 'read':
             self.requesturl += '/index.txt'
         else:
-            self.requesturl += '/index.jsp'
+            self.requesturl += '/non-exist.jsp'
 
         ajp_ip = urllib.parse.urlparse(self.requesturl).hostname
 
@@ -359,12 +359,12 @@ class ajpShooter(object):
 if __name__ == "__main__":
     # parse command line arguments
     print('''
-       _    _         __ _                 _            
-      /_\  (_)_ __   / _\ |__   ___   ___ | |_ ___ _ __ 
+       _    _         __ _                 _
+      /_\  (_)_ __   / _\ |__   ___   ___ | |_ ___ _ __
      //_\\\\ | | '_ \  \ \| '_ \ / _ \ / _ \| __/ _ \ '__|
-    /  _  \| | |_) | _\ \ | | | (_) | (_) | ||  __/ |   
-    \_/ \_// | .__/  \__/_| |_|\___/ \___/ \__\___|_|   
-         |__/|_|                                        
+    /  _  \| | |_) | _\ \ | | | (_) | (_) | ||  __/ |
+    \_/ \_// | .__/  \__/_| |_|\___/ \___/ \__\___|_|
+         |__/|_|
                                                 00theway,just for test
     ''')
     parser = argparse.ArgumentParser()
